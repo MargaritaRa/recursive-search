@@ -1,5 +1,14 @@
 function recursiveSearch(arr, target) {
-  // type your code here
+  //  first check if the array is empty, if so. then the ans will be false
+  if (arr.length === 0){
+    return false;
+  }
+  // if the arr[0] is equal to the target, the function returns true
+  if (arr[0] === target) {
+    return true;
+  }
+  //  if the target is not the first element of the array, then the func calls itself recursivly passing in the rest of the arr.slice(1) as the new array to search
+  return recursiveSearch(arr.slice(1), target);
 }
 
 if (require.main === module) {
